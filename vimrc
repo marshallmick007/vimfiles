@@ -158,6 +158,9 @@ let g:CommandTMaxHeight=10
 " easybuffer.vim
 map <leader>b :EasyBufferHorizontal<cr>
 
+" watch-for-changes.vim
+map <leader>w :WatchForChanges!<cr>
+
 " Powerline settings
 " https://github.com/Lokaltog/vim-powerline
 
