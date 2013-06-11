@@ -100,6 +100,11 @@ map <leader>f :CtrlP<cr>
 map <leader>m :CtrlPMRU<cr>
 map <leader>h :Dash!<cr>
 
+" easybuffer.vim
+map <leader>b :EasyBufferHorizontal<cr>
+" watch-for-changes.vim
+map <leader>w :WatchForChanges!<cr>
+
 " http://vimcasts.org/e/14
 cnoremap %% <C-R>=expand('%:h').'/'<cr>
 
@@ -157,11 +162,15 @@ noremap <leader>ss :call StripWhitespace()<CR>
 
 let g:CommandTMaxHeight=10
 
-" easybuffer.vim
-map <leader>b :EasyBufferHorizontal<cr>
+" ctrlp settings
+let g:ctrlp_working_path_mode = 'ra'
 
-" watch-for-changes.vim
-map <leader>w :WatchForChanges!<cr>
+set wildignore+=*/tmp/*,*/.sass-cache/*,*.so,*.swp,*.zip
+
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\v[\/]\.(git|hg|svn|sass-cache)$',
+  \ 'file': '\v\.(DS_Store)$'
+  \ }
 
 " Distraction Free Writing - 
 " https://github.com/laktek/distraction-free-writing-vim
