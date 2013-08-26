@@ -14,6 +14,8 @@ set encoding=utf-8
 call pathogen#infect()
 filetype plugin indent on
 
+
+
 set background=dark
 color base16-woodsy
 set nonumber
@@ -24,6 +26,7 @@ set showcmd     " display incomplete commands
 if has('gui_macvim')
   "set guifont=Menlo\ Regular\ for\ Powerline:h14
   set guifont=Source\ Code\ Pro:h13
+  ""set guifont=Sauce\ Code\ Powerline:h13
   "set guifont=Inconsolata-dz\ for\ Powerline:h14
 endif
 
@@ -130,11 +133,11 @@ nnoremap <c-l> <c-w>l
 set backupdir=~/.vim/_backup    " where to put backup files.
 set directory=~/.vim/_temp      " where to put swap files.
 
-if has("statusline") && !&cp
-  set laststatus=2  " always show the status bar
+"if has("statusline") && !&cp
+"  set laststatus=2  " always show the status bar
 
   "set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [ASCII=\%03.3b]\ [HEX=\%02.2B]\ [POS=%04l,%04v][%p%%]\ [LEN=%L]
-  set statusline=%F%m%r%h%w\ [type=%Y]\ [pos=%04l,%04v][%p%%]\ [len=%L]
+"  set statusline=%F%m%r%h%w\ [type=%Y]\ [pos=%04l,%04v][%p%%]\ [len=%L]
   " Start the status line
   "set statusline=%f\ %m\ %r
 
@@ -147,7 +150,7 @@ if has("statusline") && !&cp
   "set statusline+=\ Buf:\ #%n
   " Show char code and byte under the cursor
   " set statusline+=[%b][0x%B]
-endif
+"endif
 
 
 " Strip trailing whitespace (,ss)
@@ -168,11 +171,11 @@ let g:ctrlp_working_path_mode = 'ra'
 set wildignore+=*/tmp/*,*/.sass-cache/*,*.so,*.swp,*.zip
 
 let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\v[\/]\.(git|hg|svn|sass-cache)$',
-  \ 'file': '\v\.(DS_Store)$'
-  \ }
+      \ 'dir':  '\v[\/]\.(git|hg|svn|sass-cache)$',
+      \ 'file': '\v\.(DS_Store)$'
+      \ }
 
-" Distraction Free Writing - 
+" Distraction Free Writing -
 " https://github.com/laktek/distraction-free-writing-vim
 "
 " Default keybinding is F4
@@ -186,7 +189,20 @@ map <leader>5 :call ToggleDistractionFreeWriting()<CR>
 " Powerline settings
 " https://github.com/Lokaltog/vim-powerline
 
-let g:Powerline_symbols = 'fancy'
+"
+"let g:Powerline_symbols = 'fancy'
 "https://github.com/Lokaltog/vim-powerline/wiki/Statusline-segments
-call Pl#Theme#InsertSegment('ws_marker', 'after', 'lineinfo')
+"call Pl#Theme#InsertSegment('ws_marker', 'after', 'lineinfo')
 
+" vim-airline
+set laststatus=2
+let g:airline_powerline_fonts=1
+
+" old vim-powerline symbols
+  let g:airline_left_sep = '⮀'
+  let g:airline_left_alt_sep = '⮁'
+  let g:airline_right_sep = '⮂'
+  let g:airline_right_alt_sep = '⮃'
+  let g:airline#extensions#branch#symbol = '⭠'
+  let g:airline#extensions#readonly#symbol = '⭤'
+  let g:airline_linecolumn_prefix = '⭡'
