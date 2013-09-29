@@ -68,7 +68,7 @@ endfunction
 
 function! s:hibg(group,guibg,first,second)
     let ctermbg = s:choose(a:first,a:second)
-    exe "highlight ".a:group." guibg=".a:guibg." ctermbg=".ctermbg
+    exe "highlight ".a:group." cterm=NONE term=NONE guibg=".a:guibg." ctermbg=".ctermbg
 endfunction
 
 hi link railsMethod         PreProc
@@ -100,6 +100,7 @@ if &background == "light" || has("gui_running")
 else
     hi Normal guibg=Black ctermbg=NONE
 endif
+highlight SignColumn    guibg=Black ctermbg=NONE
 highlight StatusLine    guifg=Black   guibg=#aabbee gui=bold ctermfg=Black ctermbg=White  cterm=bold
 highlight StatusLineNC  guifg=#444444 guibg=#aaaaaa gui=none ctermfg=Black ctermbg=Grey   cterm=none
 "if &t_Co == 256
@@ -156,11 +157,11 @@ call s:hibg("Pmenu"     ,"#000099","Blue",18)
 call s:hibg("PmenuSel"  ,"#5555ff","DarkCyan",39)
 highlight PmenuSbar     guibg=Grey ctermbg=Grey
 highlight PmenuThumb    guibg=White ctermbg=White
-highlight TabLine       gui=underline cterm=underline
+""highlight TabLine       gui=underline cterm=underline
 call s:hifg("TabLine"   ,"#bbbbbb","LightGrey",85)
 call s:hibg("TabLine"   ,"#333333","DarkGrey",80)
 highlight TabLineSel    guifg=White guibg=Black ctermfg=White ctermbg=Black
-highlight TabLineFill   gui=underline cterm=underline
+""highlight TabLineFill   gui=underline cterm=underline
 call s:hifg("TabLineFill","#bbbbbb","LightGrey",85)
 call s:hibg("TabLineFill","#808080","Grey",83)
 
