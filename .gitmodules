@@ -22,45 +22,6 @@
 [submodule "bundle/base16-vim"]
 	path = bundle/base16-vim
 	url = https://github.com/chriskempson/base16-vim.git
-[submodule "bundle/vim-yardoc"]
-	path = bundle/vim-yardoc
-	url = https://github.com/sheerun/vim-yardoc.git
-[submodule "bundle/vim-javascript"]
-	path = bundle/vim-javascript
-	url = https://github.com/pangloss/vim-javascript.git
-[submodule "bundle/javascript-libraries-syntax.vim"]
-	path = bundle/javascript-libraries-syntax.vim
-	url = https://github.com/othree/javascript-libraries-syntax.vim.git
-[submodule "bundle/angular-vim-snippets"]
-	path = bundle/angular-vim-snippets
-	url = https://github.com/matthewsimo/angular-vim-snippets.git
-[submodule "bundle/vim-coloresque"]
-	path = bundle/vim-coloresque
-	url = https://github.com/gorodinskiy/vim-coloresque.git
-[submodule "bundle/vim-jsx"]
-	path = bundle/vim-jsx
-	url = https://github.com/mxw/vim-jsx.git
-[submodule "bundle/typescript-vim"]
-	path = bundle/typescript-vim
-	url = https://github.com/leafgarland/typescript-vim.git
-[submodule "bundle/vim-js-indent"]
-	path = bundle/vim-js-indent
-	url = https://github.com/jason0x43/vim-js-indent.git
-[submodule "bundle/gruvbox"]
-	path = bundle/gruvbox
-	url = https://github.com/morhetz/gruvbox
-[submodule "bundle/vim-es6"]
-	path = bundle/vim-es6
-	url = https://github.com/isRuslan/vim-es6.git
 [submodule "bundle/ctrlp.vim"]
 	path = bundle/ctrlp.vim
 	url = https://github.com/ctrlpvim/ctrlp.vim.git
-[submodule "bundle/vim-ng1-snippets"]
-	path = bundle/vim-ng1-snippets
-	url = https://github.com/marshallmick007/vim-ng1-snippets.git
-[submodule "bundle/vim-vue"]
-	path = bundle/vim-vue
-	url = https://github.com/posva/vim-vue.git
-[submodule "bundle/nord-vim"]
-	path = bundle/nord-vim
-	url = git://github.com/arcticicestudio/nord-vim.git
